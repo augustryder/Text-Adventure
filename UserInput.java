@@ -11,7 +11,7 @@ public class UserInput {
 	public String getInput() {
 		String str = "";
 		try {
-			str = s.nextLine();
+			str = s.nextLine().toLowerCase();
 		}
 		catch (Exception e) {
 			str = "";
@@ -21,9 +21,10 @@ public class UserInput {
 	}
 	
 	public boolean contains(String str) {
+		String inpt = str.toLowerCase();
 		Boolean b;
 		try {
-			b = Arrays.asList(s.nextLine().split(" ")).contains(str);
+			b = Arrays.asList(s.nextLine().toLowerCase().split(" ")).contains(str);
 		}
 		catch (Exception e) {
 			b = false;
