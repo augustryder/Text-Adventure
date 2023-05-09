@@ -32,7 +32,7 @@ public class Main {
 			}
 			
 			if(s.contains("look")) {
-				System.out.println("You look around and find a desk drawer, a door, and an air vent.");
+				System.out.println("You look around and find a desk drawer, a door, and an air vent. You also see a window and look out. You appear to be trapped on a boat.");
 			}
 			
 			if(s.contains("inspect")) {
@@ -110,7 +110,7 @@ public class Main {
 				startingRoom();
 			}
 			
-			if(hasCanister && user.contains("canister")) {
+			if(hasCanister && s.contains("canister")) {
 				System.out.println("You drop the gas canister into the room and it releases sleeping gas, knocking the security guard out.");
 				securityClear = true;
 			}
@@ -332,6 +332,7 @@ public class Main {
 	
 	public static void end() {
 		System.out.println("You successfully escaped!");
+		System.exit(0);
 	}
 	
 }
